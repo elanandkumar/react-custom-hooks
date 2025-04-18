@@ -1,8 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { TestUseFetch } from './components/use-fetch';
 import { TestUseDebounce } from './components/use-debounce';
+import { TestUseToggle } from './components/use-toggle';
+import { TestUseLocalStorage } from './components/use-local-storage';
 
 function App() {
   return (
@@ -12,6 +12,9 @@ function App() {
       </header>
       <TestUseFetch />
       <TestUseDebounce />
+      <TestUseToggle />
+      <br></br>
+      <TestUseLocalStorage />
     </div>
   );
 }

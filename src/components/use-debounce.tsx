@@ -1,24 +1,5 @@
-import { ChangeEvent, useEffect, useState } from "react";
-import { useFetch } from "../hooks/useFetch"
+import { useEffect, useState } from "react";
 import { useDebounce } from "../hooks/useDebounce";
-
-const UseFetchTest = () => {
-    const {loading, data, error} = useFetch('https://swapi.dev/api/people/1');
-
-    if(loading) {
-        return <div>Loading...</div>
-    }
-
-    if(error) {
-        return <div>{error?.message}</div>
-    }
-
-    if(data && !loading && !error) {
-        return <div>{JSON.stringify(data)}</div>
-    }
-
-    return null;
-}
 
 export const TestUseDebounce = () => {
     const [searchTerm, setSearchTerm] = useState('');
