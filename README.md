@@ -1,24 +1,24 @@
 # React hooks for every day use
 
-- [useFetch](#usefetch)
-- [useDebounce](#usedebounce)
-- [useToggle](#usetoggle)
-- [useLocalStorage](#uselocalstorage)
+- [`useFetch`](#usefetch)
+- [`useDebounce`](#usedebounce)
+- [`useToggle`](#usetoggle)
+- [`useLocalStorage`](#uselocalstorage)
 
-# How to use?
+## How to use?
 
-## `useFetch`
+### `useFetch`
 
 ```jsx
-const { data, loading, error } = useFetch<Book[]>('/api/books');
+  const { data, loading, error } = useFetch<Book[]>('/api/books');
 
-if (loading) return <p>Loading...</p>;
-if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
-return <ul>{data?.map(book => <li key={book.id}>{book.name}</li>)}</ul>;
+  return <ul>{data?.map(book => <li key={book.id}>{book.name}</li>)}</ul>;
 ```
 
-## `useDebounce`
+### `useDebounce`
 
 ```jsx
 const [searchTerm, setSearchTerm] = useState("");
@@ -31,7 +31,7 @@ useEffect(() => {
 }, [debouncedSearch]);
 ```
 
-## `useToggle`
+### `useToggle`
 
 ```jsx
 const [isDialogOpen, toggleDialog] = useToggle();
@@ -44,7 +44,7 @@ return (
 );
 ```
 
-## `useLocalStorage`
+### `useLocalStorage`
 
 ```jsx
 const [theme, setTheme] = useLocalStorage("theme", "light");
@@ -61,7 +61,7 @@ return (
       }}
     >
       <p>
-        This container shows the localstorage data in action to toggle theme!
+        This container shows the local-storage data in action to toggle theme!
       </p>
     </div>
   </>
