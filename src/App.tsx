@@ -1,8 +1,13 @@
-import './App.css';
-import { TestUseFetch } from './components/use-fetch';
-import { TestUseDebounce } from './components/use-debounce';
-import { TestUseToggle } from './components/use-toggle';
-import { TestUseLocalStorage } from './components/use-local-storage';
+import "./App.css";
+import {
+  TestUseFetch,
+  TestUseDebounce,
+  TestUseToggle,
+  TestUseLocalStorage,
+  TestUsePrevious,
+  TestUseClickOutside,
+  TestUseMediaQuery,
+} from "./components";
 
 function App() {
   return (
@@ -15,6 +20,9 @@ function App() {
       <TestUseToggle />
       <br></br>
       <TestUseLocalStorage />
+      <TestUsePrevious />
+      <TestUseClickOutside />
+      <TestUseMediaQuery />
     </div>
   );
 }
